@@ -7,28 +7,35 @@ About Me
 <body>
 <h1>HEYY GAT YOU THERE WELL I DIDN'T START TO DEVELOP THIS YET HEHE</H1>
 <a href="index.html">GO BACK (FOR NOW)</a>
-<form id="myForm">
-Full name: <input id="userName" type="text" name="fname">
-<br><br>
-Email : <input id="userEmail" type="text" name="email">
-<br><br>
-<textarea id ="userComment" rows="4" cols="50" name="comment"> Enter comment here...</textarea>
-<br><br>
-<input type="button" onclick="myFunction()" value="Submit">
-</form>
-<h5>Submitted data :</h5>
-<p id="data"></p>
-<script>
-function myFunction(){
-let data = "";  let name = document.getElementById("userName").value
-let email = document.getElementById("userEmail").value
-let comment = document.getElementById("userComment").value
- 
-data = "User name : "+name+"<br/>User email : "+email+ "<br/>User comment : "+comment
- 
-document.getElementById("data").innerHTML = data  // display data to paragraph
+<div class="comment">
+<textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+<input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+</div>
+<div id="display"></div>
+<script type="text/javascript">
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+function Allow()
+{
+if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+{
+user.title.value="";
+alert("Please Enter only alphabets");
 }
-</script> 
+window.location.reload()
+}
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+function clearAndShow ()
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+}
+</script>
 </body>
 
 </html>
