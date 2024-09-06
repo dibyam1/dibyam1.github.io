@@ -55,9 +55,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.samkirkland.com
-        username: myFtpUserName
-        password: ${{ secrets.ftp_password }}
+        server: ftp.dibyam1.github.io
+        username: robo
+        password: verynormalpass
 
                       - name: web deploy anything
                 uses: SamKirkland/web-deploy@v1
