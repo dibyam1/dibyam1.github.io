@@ -1,8 +1,35 @@
 User-agent: *
-Allow: /$
-Allow: /accept*
-Allow: /send*
-Allow: /%F0%9F%8C%90/
-Allow: /catalog*
-Allow: /product*
-Disallow: /
+
+# Allow crawling of public pages
+Allow: /
+
+# Disallow crawling of sensitive areas
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /password-reset
+Disallow: /api
+Disallow: /wp-admin
+Disallow: /wp-login.php
+
+# Disallow crawling of files and directories
+Disallow: /*.txt$
+Disallow: /*.log$
+Disallow: /*.xml$
+Disallow: /*.json$
+Disallow: /*.ini$
+Disallow: /*.conf$
+Disallow: /*.env$
+Disallow: /vendor/
+Disallow: /node_modules/
+
+# Disallow crawling of specific URLs
+Disallow: /secret-page
+Disallow: /hidden-resource
+
+# Set crawl delay to 10 seconds
+Crawl-delay: 10
+
+# Specify sitemap location
+Sitemap: (link unavailable)
+
