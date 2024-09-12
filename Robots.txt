@@ -31,5 +31,5 @@ Disallow: /hidden-resource
 Crawl-delay: 10
 
 # Specify sitemap location
-Sitemap: (link unavailable)
+Sitemap: (sitemap.xml)
 
