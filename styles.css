@@ -70,8 +70,10 @@
     color: blue;  
     text-decoration: none;  
     }  
- 
-
+  header a:hover {
+   background: green;
+   color: green;
+   }
 
 
 
