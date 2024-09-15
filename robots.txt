@@ -15,7 +15,7 @@ Disallow: /wp-login.php
 # Disallow crawling of files and directories
 Disallow: /*.txt$
 Disallow: /*.log$
-Disallow: /*.xml$
+
 Disallow: /*.json$
 Disallow: /*.ini$
 Disallow: /*.conf$
