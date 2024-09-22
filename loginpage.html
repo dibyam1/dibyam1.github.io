@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Protected Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #password-container { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Password Protected Page</h1>
+  
+  <div id="password-container">
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+  
+  <div id="protected-content" style="display: none;">
+    <!-- Your protected content here -->
+    <h2>Welcome!</h2>
+    <p>This content is only accessible with the correct password.</p>
+  </div>
+  
+  <script>
+    const password = "Robo@pass#"; // Replace with your desired password
+    
+    function checkPassword() {
+      const userInput = document.getElementById("password").value;
+      
+      if (userInput === password) {
+        document.getElementById("password-container").style.display = "none";
+        document.getElementById("protected-content").style.display = "block";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+    
+    // Prompt for password on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("password-container").style.display = "block";
+    });
+  </script>
+</body>
+</html>
