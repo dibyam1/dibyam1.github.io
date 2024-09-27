@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Password Protected Page</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    #password-container { display: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .login-container {
+            width: 301px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .login-form {
+            margin-top: 20px;
+        }
+        
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .login-form input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Password Protected Page</h1>
-  
-  <div id="password-container">
-    <input type="password" id="password" placeholder="Enter password">
-    <button onclick="checkPassword()">Submit</button>
-  </div>
-  
-  <div id="protected-content" style="display: none;">
-    <!-- Your protected content here -->
-    <h2>Welcome!</h2>
-    <p>This content is only accessible with the correct password.</p>
-  </div>
-  
-  <script>
-    const password = "Robo@pass#"; // Replace with your desired password
-    
-    function checkPassword() {
-      const userInput = document.getElementById("password").value;
-      
-      if (userInput === password) {
-        document.getElementById("password-container").style.display = "none";
-        document.getElementById("protected-content").style.display = "block";
-      } else {
-        alert("Incorrect password. Please try again.");
-      }
-    }
-    
-    // Prompt for password on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("password-container").style.display = "block";
-    });
-  </script>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Login</h2>
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Login">
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
