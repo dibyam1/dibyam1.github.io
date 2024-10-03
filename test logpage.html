@@ -132,34 +132,36 @@ body {
 
 const form = document.getElementById("login-form");
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const id = document.getElementById("id").value;
-    const password = document.getElementById("password").value;
-    const verifiedId = "admin";
-    const verifiedPassword = "lol";
+  e.preventDefault();
+  const id = document.getElementById("id").value;
+  const password = document.getElementById("password").value;
+  const verifiedId = "admin";
+  const verifiedPassword = "lol";
 
-    if (id === verifiedId && password === verifiedPassword) {
-        document.getElementById("error-message").innerHTML = "Login successful!";
-        window.location.href = 'staff-dashboard.html';
+  if (id === verifiedId && password === verifiedPassword) {
+    document.getElementById("error-message").innerHTML = "Login successful!";
+    window.location.href = 'staff-dashboard.html';
 
-        fetch("(link unavailable)", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                id: id,
-                password: password,
-                timestamp: new Date().toISOString()
-            }),
-            mode: "cors"
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
-    } else {
-        document.getElementById("error-message").innerHTML = "Invalid ID or password.";
-    }
+    $.ajax({
+      type: "POST",
+      url: "(Infinity Free PHP URL)",
+      crossDomain: true,
+      contentType: "application/json",
+      data: JSON.stringify({
+        id: id,
+        password: password,
+        timestamp: new Date().toISOString()
+      }),
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+      }
+    });
+  } else {
+    document.getElementById("error-message").innerHTML = "Invalid ID or password.";
+  }
 });
     </script>
 </body>
