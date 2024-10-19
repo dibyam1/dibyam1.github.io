@@ -32,7 +32,7 @@ git config git-ftp.username $ {{ secrets.FTP_USERNAME }}
 
 git config git-ftp.password $ {{ secrets.FTP_PASSWORD }}
 
-git config git-ftp.host (link unavailable)
+git config git-ftp.host github.com
 
 git config git-ftp.repo ${{ github.repository }}
 
