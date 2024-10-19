@@ -1,6 +1,6 @@
 name: FTP Deploy to GitHub Pages
 
-on:
+on: [push]
 
 push:
 
