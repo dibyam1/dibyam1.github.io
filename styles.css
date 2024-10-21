@@ -40,8 +40,9 @@
   width: 100%;
   background-color: #333;
   color: #fff;
-  padding: 1em;
+  padding: 0.5em;
   text-align: center;
+  height: 40px;
 }
 
 .top-banner ul {
@@ -50,10 +51,12 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;  
 }
 
 .top-banner li {
-  margin-right: 20px;
+  margin-right: 10px;
+  
 }
 
 .top-banner a {
@@ -63,7 +66,7 @@
 
 .top-banner a:hover {
   background-color: #555;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
 }
 /* Links inside the navbar */
