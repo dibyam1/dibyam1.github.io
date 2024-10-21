@@ -34,6 +34,38 @@
   width: 100%; /* Full width */
 }
 
+.top-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.top-banner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-banner li {
+  margin-right: 20px;
+}
+
+.top-banner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-banner a:hover {
+  background-color: #555;
+  padding: 10px;
+  border-radius: 5px;
+}
 /* Links inside the navbar */
 .navbar a {
   float: left;
