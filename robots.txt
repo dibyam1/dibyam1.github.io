@@ -20,6 +20,7 @@ Disallow: /*.json$
 Disallow: /*.ini$
 Disallow: /*.conf$
 Disallow: /*.env$
+Disallow: /*.css$
 Disallow: /vendor/
 Disallow: /node_modules/
 
