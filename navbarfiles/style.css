@@ -446,7 +446,7 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container1 {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -465,7 +465,7 @@ pre {
     .container {
       max-width: 1140px; } }
 
-.container-fluid {
+.container1-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
