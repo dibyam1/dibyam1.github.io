@@ -1,4 +1,4 @@
-         	.container {
+         	.container1 {
 			max-width: 800px;
 			margin: 40px auto;
 			padding: 20px;
@@ -26,14 +26,16 @@
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
  /* The navigation bar */
+ /* 
 .navbar {
   overflow: hidden;
   background-color: #e46be8;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed; /* Set the navbar to fixed position 
+  top: 0; /* Position the navbar at the top of the page 
   width: 100%; /* Full width */
 }
-
+*/
+ /*
 .top-banner {
   position: fixed;
   top: 0;
@@ -69,7 +71,7 @@
   padding: 20px;
   border-radius: 5px;
 }
-/* Links inside the navbar */
+ Links inside the navbar 
 .navbar a {
   float: left;
   display: block;
@@ -79,11 +81,12 @@
   text-decoration: none;
 }
 
-/* Change background on mouse-over */
+/* Change background on mouse-over 
 .navbar a:hover {
   background: #;
   color: ;
-}   
+}
+ /*
   header {  
     background-color: orange;  
     position: fixed;  
