@@ -25,6 +25,15 @@
    border-radius: 1px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+   .bottom-part {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #99ccff;
+    border: 10px solid #ff5050;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
  /* The navigation bar */
  /* 
 .navbar {
@@ -33,7 +42,7 @@
   position: fixed; /* Set the navbar to fixed position 
   top: 0; /* Position the navbar at the top of the page 
   width: 100%; /* Full width */
-}
+  
 */
  /*
 .top-banner {
