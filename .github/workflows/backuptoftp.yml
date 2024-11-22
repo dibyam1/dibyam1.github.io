@@ -32,4 +32,3 @@ jobs:
           remoteDir: /mywebsitefullbackup/
           options: --delete --ascii
           forceSsl: false
-          debug: true
