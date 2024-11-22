@@ -1,17 +1,35 @@
-name: Deploy via ftp
-on: push
+name: Backup to FTP
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  deploy:
-    name: Deploy
+  backup:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ${{ secrets.FTP_HOST }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "./"
-        remoteDir: "/mywebsitefullbackup/"
-        options: "--delete --asci"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure FTP
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          echo "ftp_host=${FTP_HOST}" >> $GITHUB_ENV
+          echo "ftp_username=${FTP_USERNAME}" >> $GITHUB_ENV
+          echo "ftp_password=${FTP_PASSWORD}" >> $GITHUB_ENV
+
+      - name: Backup files to FTP
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ env.FTP_HOST }}
+          user: ${{ env.FTP_USERNAME }}
+          password: ${{ env.FTP_PASSWORD }}
+          localDir: ./
+          remoteDir: /mywebsitefullbackup/
+          options: --delete --ascii
+          forceSsl: false
+          debug: true
