@@ -2,7 +2,8 @@ name: Backup to FTP
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   backup:
@@ -13,9 +14,9 @@ jobs:
 
       - name: Configure FTP
         env:
-          FTP_HOST: ${{ ftpupload.net }}
-          FTP_USERNAME: ${{ if0_37404188 }}
-          FTP_PASSWORD: ${{ Robo2023 }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
           echo "ftp_host=${FTP_HOST}" >> $GITHUB_ENV
           echo "ftp_username=${FTP_USERNAME}" >> $GITHUB_ENV
