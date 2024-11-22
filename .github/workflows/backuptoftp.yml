@@ -30,5 +30,6 @@ jobs:
           password: Robo2023
           localDir: ./
           remoteDir: /mywebsitefullbackup/
-          options: --delete --ascii --upload-all
+          options: --delete --ascii
+          glob: '**/*'
           forceSsl: true
