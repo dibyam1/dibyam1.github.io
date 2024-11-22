@@ -25,7 +25,7 @@ jobs:
       - name: Backup files to FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: ${{ env.FTP_HOST }}
+          host: ${{ env.FTP_HOST }}:21
           user: ${{ env.FTP_USERNAME }}
           password: ${{ env.FTP_PASSWORD }}
           localDir: ./
