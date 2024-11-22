@@ -15,4 +15,4 @@ jobs:
         username: if0_37404188
         password: Robo2024
         protocol: ftp
-        server-dir: /test
+        server-dir: /test/
