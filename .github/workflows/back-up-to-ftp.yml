@@ -1,0 +1,34 @@
+name: Backup to FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure FTP
+        env:
+          FTP_HOST: ${{ftp://ftpupload.net}}
+          FTP_USERNAME: ${{if0_37404188}}
+          FTP_PASSWORD: ${{Robo2023}}
+        run: |
+          echo "ftp_host=${FTP_HOST}" >> $GITHUB_ENV
+          echo "ftp_username=${FTP_USERNAME}" >> $GITHUB_ENV
+          echo "ftp_password=${FTP_PASSWORD}" >> $GITHUB_ENV
+
+      - name: Backup files to FTP
+        uses: appleboy/ftp-action@v1
+        with:
+          host: ${{ env.ftp_host }}
+          username: ${{ env.ftp_username }}
+          password: ${{ env.ftp_password }}
+          local_path: ./
+          remote_path: /mywebsitefillbackup/
+          upload: true
+          delete: false
