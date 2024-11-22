@@ -2,8 +2,7 @@ name: Backup to FTP
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   backup:
