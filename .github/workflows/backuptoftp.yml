@@ -13,9 +13,9 @@ jobs:
 
       - name: Configure FTP
         env:
-          FTP_HOST: ${{ftpupload.net}}
-          FTP_USERNAME: ${{if0_37404188}}
-          FTP_PASSWORD: ${{Robo2023}}
+          FTP_HOST: ${{ ftpupload.net }}
+          FTP_USERNAME: ${{ if0_37404188 }}
+          FTP_PASSWORD: ${{ Robo2023 }}
         run: |
           echo "ftp_host=${FTP_HOST}" >> $GITHUB_ENV
           echo "ftp_username=${FTP_USERNAME}" >> $GITHUB_ENV
