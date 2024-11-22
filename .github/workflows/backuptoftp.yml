@@ -14,9 +14,9 @@ jobs:
 
       - name: Configure FTP
         env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ftpupload.net
+          FTP_USERNAME: if0_37404188
+          FTP_PASSWORD: Robo2023
         run: |
           echo "ftp_host=${FTP_HOST}" >> $GITHUB_ENV
           echo "ftp_username=${FTP_USERNAME}" >> $GITHUB_ENV
@@ -25,10 +25,10 @@ jobs:
       - name: Backup files to FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: ${{ env.FTP_HOST }}:21
-          user: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
+          host: ftpupload.net
+          user: if0_37404188
+          password: Robo2023
           localDir: ./
           remoteDir: /mywebsitefullbackup/
           options: --delete --ascii
-          forceSsl: false
+          forceSsl: true
