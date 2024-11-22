@@ -23,7 +23,7 @@ jobs:
           echo "ftp_password=${FTP_PASSWORD}" >> $GITHUB_ENV
 
       - name: Backup files to FTP
-        uses: sebastianpopp/ftp-action
+        uses: sebastianpopp/ftp-action @v2
         with:
           host: ${{ env.FTP_HOST }}
           username: ${{ env.FTP_USERNAME }}
