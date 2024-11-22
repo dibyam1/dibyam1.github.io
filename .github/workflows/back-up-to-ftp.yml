@@ -14,7 +14,7 @@ jobs:
 
       - name: Configure FTP
         env:
-          FTP_HOST: ${{ftp://ftpupload.net}}
+          FTP_HOST: ${{ftpupload.net}}
           FTP_USERNAME: ${{if0_37404188}}
           FTP_PASSWORD: ${{Robo2023}}
         run: |
@@ -25,9 +25,9 @@ jobs:
       - name: Backup files to FTP
         uses: appleboy/ftp-action@v1
         with:
-          host: ${{ env.ftp_host }}
-          username: ${{ env.ftp_username }}
-          password: ${{ env.ftp_password }}
+          host: ${{ env.FTP_HOST }}
+          username: ${{ env.FTP_USERNAME }}
+          password: ${{ env.FTP_PASSWORD }}
           local_path: ./
           remote_path: /mywebsitefillbackup/
           upload: true
