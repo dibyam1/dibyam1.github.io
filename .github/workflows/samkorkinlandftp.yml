@@ -13,6 +13,6 @@ jobs:
       with:
         server: ftpupload.net
         username: if0_37404188
-        password: Robo2024
+        password: Robo2023
         protocol: ftp
         server-dir: /test/
