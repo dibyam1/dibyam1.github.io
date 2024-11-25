@@ -54,6 +54,17 @@
   .bottom-info a:hover {
     color: #23527c;
   }
+  /* Add CSS to make the sections side by side */
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex-basis: 30%;
+    margin: 20px;
+  }
  /* The navigation bar */
  /* 
 .navbar {
