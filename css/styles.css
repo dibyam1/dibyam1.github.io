@@ -33,7 +33,7 @@
   }
   
   .bottom-info h2 {
-    margin-top: 0;
+    font-weight: bold;
   }
   
   .bottom-info ul {
@@ -44,6 +44,7 @@
   
   .bottom-info li {
     margin-bottom: 10px;
+    font-weight: bold;
   }
   
   .bottom-info a {
