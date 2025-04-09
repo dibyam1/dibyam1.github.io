@@ -81,9 +81,16 @@
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    margin: 20px 0; /* Reduce vertical spacing */
+    margin: 40px auto; /* Reduce vertical spacing */
   }
-
+  
+  /*max-width: 100px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #cfd1d4;
+  border: 1px solid #ff5050;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   .custom-button {
     background-color: #4CAF50; /* Green background */
     border: none; /* Remove border */
