@@ -74,7 +74,6 @@
   <style>
 .lol {
   transition: background-image 1s ;
-    /*background-image: url("/nw_bg.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -143,6 +142,7 @@
     </nav>
   </section>
   <div class="lol">
+
     <script>
       const images = [
         'nw_bg1.jpg',
@@ -156,11 +156,11 @@
         'nw_bg9.jpg',
         'nw_bg10.jpg'
       ];
-  
-      const randomIndex = Math.floor(Math.random() * images.length);
-      const randomImage = images[randomIndex];
-  
-      document.body.style.backgroundImage = `url(${randomImage})`;
+    
+      document.querySelector('.lol').style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
+      document.querySelector('.lol').style.backgroundSize = 'cover';
+      document.querySelector('.lol').style.backgroundRepeat = 'no-repeat';
+      document.querySelector('.lol').style.backgroundAttachment = 'fixed';
     </script>
   <script src="navbarfiles/js/jquery.min.js"></script> 
   <script src="navbarfiles/js/popper.js"></script> 
