@@ -2,6 +2,8 @@ User-agent: *
 
 # Allow crawling of public pages
 Allow: /
+Allow: /*.html
+Allow: /*.css
 
 # Disallow crawling of sensitive areas
 Disallow: /admin
@@ -20,17 +22,17 @@ Disallow: /*.json$
 Disallow: /*.ini$
 Disallow: /*.conf$
 Disallow: /*.env$
-Disallow: /*.css$
 Disallow: /vendor/
 Disallow: /node_modules/
+Disallow: /.well-known/
 
 # Disallow crawling of specific URLs
 Disallow: /secret-page
 Disallow: /hidden-resource
-Disallow: 
+Disallow: /test/
 # Set crawl delay to 10 seconds
 Crawl-delay: 10
 
 # Specify sitemap location
-Sitemap: (sitemap.xml)
+Sitemap: (/sitemap.xml)
 
