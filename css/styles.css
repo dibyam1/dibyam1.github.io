@@ -3,9 +3,10 @@
 			margin: 40px auto;
 			padding: 20px;
 			background-color: #99ccff;
-			/*border: 10px solid #0be66a;
-			border-radius: 10px;*/
+			/*border: 10px solid #0be66a;*/
+			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
 		}
     @property --angle{
   syntax: "<angle>";
