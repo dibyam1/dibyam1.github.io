@@ -37,7 +37,6 @@
 }
 .container1::before{
   filter: blur(1.5rem);
-  opacity: 0.5;
 }
 @keyframes spin{
   from{
