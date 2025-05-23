@@ -1,11 +1,18 @@
-         	.container1 {
-			max-width: 800px;
+/*.card{
+  margin: 0 auto;
+  padding: 2em;
+  width: 800px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}         	*/
+          .container1 {
+			width: 800px;
 			margin: 0px auto;
-			padding: 20px;
-			background-color: #99ccff;
-			/*border: 10px solid #0be66a;*/
+			padding: 2em;
+			background: #99ccff;
 			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       position: relative;
 		}
     @property --angle{
