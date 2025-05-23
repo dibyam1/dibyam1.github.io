@@ -14,7 +14,7 @@
   inherits: false;
 }
 
-.container1::after, .card::before{
+.container1::after, .container1::before{
   content: '';
   position: absolute;
   height: 100%;
