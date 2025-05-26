@@ -72,7 +72,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--css links end-->
   <style>
-.lol {
+body {
   transition: background-image 1s ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -158,10 +158,10 @@
         'nw_bg10.jpg'
       ];
     
-      document.querySelector('.lol').style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
-      document.querySelector('.lol').style.backgroundSize = 'cover';
-      document.querySelector('.lol').style.backgroundRepeat = 'no-repeat';
-      document.querySelector('.lol').style.backgroundAttachment = 'fixed';
+      document.body.style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundRepeat = 'no-repeat';
+      document.body.style.backgroundAttachment = 'fixed';
     </script>
   <script src="navbarfiles/js/jquery.min.js"></script> 
   <script src="navbarfiles/js/popper.js"></script> 
