@@ -36,7 +36,7 @@
   animation: 3s spin linear infinite;
 }
 .container1::before{
-  filter: blur(1rem);
+  filter: blur(3rem);
 }
 @keyframes spin{
   from{
